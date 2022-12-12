@@ -1,0 +1,17 @@
+{
+  "name": "gnosis-validator-pools-api",
+  "version": "1.0.0",
+  "description": "get entity name from gnosis validator pubkey",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "json-server, node, REST API"
+  ],
+  "author": "jason",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
