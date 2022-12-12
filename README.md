@@ -8,10 +8,6 @@ This is a simple REST API to get the entity given a validator public key.
 
 # REST API
 
-The REST API to the example app is described below.
-
-## Get list of Things
-
 ### Request
 
 `GET /api/v1/pubkey?q=:q`

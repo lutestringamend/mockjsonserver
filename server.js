@@ -27,9 +27,9 @@ router.render = (req, res) => {
         entity: res.locals.data[0].Label
       });
     } else {
-      res.jsonp([
-        { entity: null }
-      ])
+      res.jsonp({
+         entity: null 
+      })
     }
   } else {
     res.status(500);
