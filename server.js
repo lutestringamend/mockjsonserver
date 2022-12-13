@@ -28,6 +28,23 @@ router.render = (req, res) => {
         message: "Multiple results. Make sure pubkey is complete"
       });
     } else if (res.locals.data.length === 1) {
+      try {
+        let entity = res.locals.data[0].Label;
+        if (entity.substr(0,2) === "0x") {
+          res.jsonp({
+            entity: null 
+         })
+        } else {
+          res.jsonp({
+            entity: res.locals.data[0].Label
+          });
+        }
+      } catch (err) {
+        res.jsonp({
+          status: "error",
+          error: JSON.stringify(err)
+        });
+      }
       res.jsonp({
         entity: res.locals.data[0].Label
       });
